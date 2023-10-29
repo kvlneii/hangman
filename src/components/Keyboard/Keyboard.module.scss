@@ -1,0 +1,29 @@
+@use '../../consts/scss/colors' as colors;
+
+.btn {
+  width: 100%;
+  background: colors.$btn__bg;
+  border: 3px solid colors.$dark__primary;
+  aspect-ratio: 1 / 1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: colors.$dark__primary;
+  font-family: inherit;
+}
+
+.btn.active {
+  background-color: colors.$btn__bg--active;
+  color: colors.$btn__text--active;
+}
+
+.btn.inactive {
+  opacity: 0.3;
+}
+
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+  background-color: colors.$btn__bg--active;
+}

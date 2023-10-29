@@ -1,0 +1,27 @@
+@use '../../consts/scss/colors' as colors;
+
+.btn {
+  margin-top: 2rem;
+  max-width: 9.5rem;
+  border: 3px solid colors.$dark__primary;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: colors.$dark__primary;
+  font-family: inherit;
+
+  background: colors.$btn__shadow;
+  background: linear-gradient(
+    90deg,
+    colors.$btn__bg--linear-01 0%,
+    colors.$btn__bg--linear-02 51%
+  );
+  transition: box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 50px 7px colors.$btn__shadow;
+}
